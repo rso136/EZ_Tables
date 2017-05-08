@@ -10,10 +10,10 @@ if (process.env.JAWSDB_URL) {
 } else {
     var pool = mysql.createPool({
     connectionLimit: 100,
-    host: 'localhost',
-    user: 'root',
-    password: 'orangegit12',
-    database: 'bamazon'
+    host: '',
+    user: '',
+    password: '',
+    database: ''
 });
 
 };
