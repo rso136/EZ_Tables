@@ -23,7 +23,7 @@ var pool = mysql.createPool({
 Next, edit the following line in the script.js file as follows:
 
 
-     data[i].Tables_in_"Insert the name of your database here"
+     data[i].Tables_in_'Insert the name of your database here'
 
 
 That's it. You can now use EZ Tables for your own MySQL database administration needs!
