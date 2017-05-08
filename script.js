@@ -1,5 +1,3 @@
-var dbTables = data[i].Tables_in_ofdqo7qxpjr0a7vl;
-
 var currentURL = window.location.origin;
 var modalKeys = [];
 var modalVals = [];
