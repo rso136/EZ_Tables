@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/fce54115db.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/hover.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Edit Selected Row</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form id="modalForm">
+                            
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-custom" data-dismiss="modal">CLOSE</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12" id="heading">
+                <b><h1 id="ezHeading">EZ-TABLES</h1></b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-12" id="tablesMenu">
+                <div class="form-group">
+                    <label for="tablesDrop">Select Table</label>
+                    <select id="tablesDrop" class="form-control" onchange="showTables(this.value)">
+                        <option value=''>Select a table</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-10 col-xs-12" id="queryArea">
+                <div class="form-group">
+                    <label for="sqlQuery">SQL Query:</label>
+                    <textarea class="form-control" rows="5" id="sqlQuery" name="search"></textarea>
+                    <br>
+                    <a type="submit" class="btn btn-custom hvr-pop" id="submitBtn">SUBMIT</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 col-xs-7">
+                <div class="input-group">
+                    <!--<input type="number" class="form-control" min="1" step="1" id="rowsInput">-->
+                    <span class="input-group-btn">
+                    <a class="btn btn-customB" type="button" id="submitRowsBtn"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </span>
+                    <input type="number" class="form-control" min="0" step="1" id="rowsInput" placeholder="starting row">
+                </div>
+            </div>
+            <!--<div class="col-md-2 col-xs-12" id="rowsText">
+            <p><b>return up to row #</b></p>
+        </div>-->
+            <div class="col-md-2 col-xs-12" id="inputBBox">
+                <div class="input-group">
+                    <input type="number" class="form-control" min="1" step="1" id="rowsInputB" placeholder="ending row">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-md-6 col-md-offset-2 col-xs-12" id="tableInfo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2 col-xs-12" id="sqlRes">
+                <div class="panel panel-default" id="panel">
+                    <div id="panelTop">
+                        <h4><span id="panelHeading">Please Select a Table</span></h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered" id="sqlTable">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2 col-xs-12" id="noRes">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="footer" class="col-md-12 col-xs-12">
+                <p>EZ Tables created by Richard Oh</p>
+                <p id="copyright"><b>© Richard Oh</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+
+</html>

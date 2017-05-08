@@ -1,0 +1,149 @@
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	color: #ffffff;
+	background-color: #576375;
+	min-height: 100%;
+    padding-bottom: 15rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+#myModal .modal-header {
+	background-color: #576375;
+	font-family: 'Righteous', cursive;
+	text-shadow: 2px 2px 4px #000000;
+
+	color: #db153a;
+}
+
+#myModal .modal-body {
+	background-color: #576375;
+}
+
+#myModal .modal-footer {
+	background-color: #576375;
+	border-top: transparent;
+}
+
+#formSubmit {
+	margin-right: 20px;
+}
+
+#heading {
+	text-align: center;
+	font-family: 'Righteous', cursive;
+	color: #db153a;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#ezHeading {
+	font-size: 3.2em;
+
+}
+
+.btn-custom {
+	border-radius: 0;
+	background-color: #b20119;
+	color: #ffffff;
+}
+
+.btn-custom:hover {
+	background-color: #b20119;
+	color: #ffffff;
+}
+
+.btn-custom:visited {
+	background-color: #b20119;
+	color: #ffffff;
+}
+
+.btn-custom:active {
+	background-color: #b20119;
+	color: #ffffff;
+}
+
+
+.btn-customB {
+	background-color: #232323;
+	color: #ffffff;
+}
+
+.btn-customB:hover {
+	background-color: #232323;
+	color: #ffffff;
+}
+
+.btn-customB:visited {
+	background-color: #232323;
+	color: #ffffff;
+}
+
+.btn-customB:active {
+	background-color: #232323;
+	color: #ffffff;
+}
+
+.btn-customC {
+	border-radius: 0;
+	background-color: #0cb563;
+	color: #ffffff;
+}
+
+.btn-customC:hover {
+	background-color: #0cb563;
+	color: #ffffff;
+}
+
+.btn-customC:visited {
+	background-color: #0cb563;
+	color: #ffffff;
+}
+
+.btn-customC:active {
+	background-color: #0cb563;
+	color: #ffffff;
+}
+
+#rowsText {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+#panelTop {
+	text-align: center;
+}
+
+#panel {
+	color: #000000;
+	opacity: 0.7;
+}
+
+#sqlTable {
+	background-color: #fff;
+	color: #000000;
+}
+
+#footer {	
+  height: 75px;
+  background-color: #1c1c1c;
+  text-align: center;
+  color: white;
+  position: absolute;
+  padding-top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+
+	#inputBBox {
+		margin-top: 1.5vh;
+	}
+
+}
+
