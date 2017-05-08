@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 col-xs-12" id="tablesMenu">
+            <div class="col-md-2 col-sm-3 col-xs-12" id="tablesMenu">
                 <div class="form-group">
                     <label for="tablesDrop">Select Table</label>
                     <select id="tablesDrop" class="form-control" onchange="showTables(this.value)">
@@ -49,7 +49,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-10 col-xs-12" id="queryArea">
+            <div class="col-md-10 col-sm-9 col-xs-12" id="queryArea">
                 <div class="form-group">
                     <label for="sqlQuery">SQL Query:</label>
                     <textarea class="form-control" rows="5" id="sqlQuery" name="search"></textarea>
@@ -59,19 +59,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 col-md-offset-2 col-xs-7">
+            <div class="col-md-2 col-md-offset-2 col-sm-4 col-sm-offset-3 col-xs-7">
                 <div class="input-group">
                     <!--<input type="number" class="form-control" min="1" step="1" id="rowsInput">-->
                     <span class="input-group-btn">
                     <a class="btn btn-customB" type="button" id="submitRowsBtn"><i class="fa fa-search" aria-hidden="true"></i></a>
-                </span>
+                    </span>
                     <input type="number" class="form-control" min="0" step="1" id="rowsInput" placeholder="starting row">
                 </div>
             </div>
             <!--<div class="col-md-2 col-xs-12" id="rowsText">
             <p><b>return up to row #</b></p>
         </div>-->
-            <div class="col-md-2 col-xs-12" id="inputBBox">
+            <div class="col-md-2 col-sm-4 col-xs-12" id="inputBBox">
                 <div class="input-group">
                     <input type="number" class="form-control" min="1" step="1" id="rowsInputB" placeholder="ending row">
                 </div>
