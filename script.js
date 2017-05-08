@@ -111,11 +111,11 @@ function rowsUpdate(data) {
 $.get(currentURL + "/tables", function(data) {
 
     //var dbTables = data[i].Tables_in_ofdqo7qxpjr0a7vl;
-    var dbTables = data.Tables_in_ofdqo7qxpjr0a7vl;
+    var db = ofdqo7qxpjr0a7vl;
     console.log(data);
     //to connect to your database, edit the following line: data[i].Tables_in_" The name of your database "
     for (var i = 0; i < data.length; i++) {
-        $('#tablesDrop').append("<option value='" + dbTables[i] + "'>" + dbTables[i] + "</option>");
+        $('#tablesDrop').append("<option value=data[i].Tables_in_'" + db + "'>" + data[i].Tables_in_ + db + "</option>");
     }
 });
 
