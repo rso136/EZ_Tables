@@ -162,7 +162,7 @@ $('#submitBtn').on("click", function() {
     console.log(sql);
 
     if (chkSql == '') {
-        $('#panelHeading').html("<h4>Enter sql query or select table before selecting rows</h4>");
+        $('#panelHeading').html("<h4>Please complete necessary inputs before running query</h4>");
     } else {
 
         $('#tableInfo').html("<b><p>Current Table: " + tableName + "</p></b>");
@@ -239,7 +239,7 @@ $('#submitRowsBtn').on('click', function() {
         $('#sqlTable').empty();
         $('#panel').css("opacity", "0.7");
 
-        $('#panelHeading').html("<h4>Please complete necessary inputs before search</h4>");
+        $('#panelHeading').html("<h4>Enter sql query or select table before selecting rows</h4>");
     } else if (parseFloat(chkRowInputA) > parseFloat(chkRowInputB)) {
         $('#sqlTable').empty();
         $('#panel').css("opacity", "0.7");
