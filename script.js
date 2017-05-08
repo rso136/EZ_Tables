@@ -126,7 +126,6 @@ function showTables(tableName) {
         $('#sqlQuery').val('');
         console.log(tableName);
 
-
         $('#sqlTable').empty();
 
         $('#sqlTable').append("<thead><tr></tr></thead>");
@@ -197,7 +196,6 @@ $('#submitBtn').on("click", function() {
                     $('#panelHeading').html("<h4 class='queryMsg'>Update Successful " + data.message +")</h4>");
                 }
             }
-
 
             if (data.length == 0) {
                 $('#panel').css("opacity", "0.7");
