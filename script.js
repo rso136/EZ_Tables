@@ -114,6 +114,7 @@ $.get(currentURL + "/tables", function(data) {
     //to connect to your database, edit the following line: data[i].Tables_in_" The name of your database "
     for (var i = 0; i < data.length; i++) {
         $('#tablesDrop').append("<option value='" + data[i].Tables_in_ofdqo7qxpjr0a7vl + "'>" + data[i].Tables_in_ofdqo7qxpjr0a7vl + "</option>");
+        // $('#tablesDrop').append("<option value='" + data[i].Tables_in_bamazon + "'>" + data[i].Tables_in_bamazon + "</option>");
     }
 });
 
@@ -315,7 +316,11 @@ $(document).on('click', '#formSubmit', function() {
     console.log(tableName);
     var queryString = "UPDATE " + tableName + " SET ";
     var queryEnd = " WHERE ";
+    var queryStringB = "SELECT * FROM " + tableName + " WHERE ";
+    // var queryEndB = " WHERE ";
     var sqlQuery;
+    var sqlQueryB;
+
     console.log('click');
     updateVals = [];
     //var trNum = $("tr").length;
@@ -335,15 +340,20 @@ $(document).on('click', '#formSubmit', function() {
         if (i == modalVals.length - 1) {
             queryString = queryString + modalKeys[i] + "=" + "'" + updateVals[i] + "'";
             queryEnd = queryEnd + modalKeys[i] + "=" + "'" + modalVals[i] + "' ";
+            queryStringB = queryStringB + modalKeys[i] + "=" + "'" + updateVals[i] + "'";
+
         } else {
             queryString = queryString + modalKeys[i] + "=" + "'" + updateVals[i] + "', ";
             queryEnd = queryEnd + modalKeys[i] + "=" + "'" + modalVals[i] + "' AND ";
+            queryStringB = queryStringB + modalKeys[i] + "=" + "'" + updateVals[i] + "'AND ";
         }
 
     }
 
     console.log(queryString + queryEnd);
+    console.log('QueryStringB: ' + queryStringB);
     sqlQuery = queryString + queryEnd;
+    sqlQueryB = queryStringB;
 
     $.post(currentURL + '/sql/' + sqlQuery, function(data) {
 
@@ -363,12 +373,11 @@ $(document).on('click', '#formSubmit', function() {
         $('#sqlTable').append("<tbody></tbody>");
         $('#sqlTable > tbody').append("<tr></tr>");
 
-        var itemID = $('#ItemID').val().trim();
+        $.get(currentURL + '/sqlB/' + sqlQueryB, function(data) {
 
-        $.get(currentURL + '/request/' + tableName + '/' + itemID, function(data) {
-
+            console.log('Data updated from modal:' + data);
             getTableInfo(data);
-        
+
         });
 
     });

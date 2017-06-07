@@ -129,6 +129,26 @@ app.post('/sql/:sqlQuery', function(req, res) {
 
 });
 
+app.get('/sqlB/:sqlQueryB', function(req, res) {
+
+    var sqlQueryB = req.params.sqlQueryB;
+    console.log('sqlQueryB: ' + sqlQueryB);
+
+    pool.query(sqlQueryB, function(error, rows, fields) {
+
+        if (error) {
+            console.log('There was a query error');
+            res.json(error);
+        }
+
+        if (!error) {
+            res.json(rows);
+        }
+
+    })
+
+});
+
 app.get('/request/:table/:itemID', function(req, res) {
 
     var table = req.params.table;
